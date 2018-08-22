@@ -1,6 +1,6 @@
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:400,700,900&subset=cyrillic');
 
 // Variables
 @import 'variables';
@@ -11,4 +11,65 @@
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+// new
+* {
+  font-family: 'Roboto', sans-serif;
+}
+.btn-add-block {
+  text-align: right;
+}
+
+.title {
+  h1 {
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+}
+
+.table-codes {
+  .title {
+    width: 420px;
+    font-weight: 600;
+  }
+  .priority {
+    color: #3490dc;
+  }
+  tr {
+    background-color: #fff;
+    border: 1px solid #d4dde2;
+    td {
+      border: none;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.actions {
+  text-align: right;
+  &__action--edit {
+
+  }
+  &__action-delete {
+    color: #ff0000 !important;
+  }
+  a {
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline !important;
+    }
+  }
+}
+
+.card {
+  &-body {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+  label {
+    font-weight: 600;
+  }
 }

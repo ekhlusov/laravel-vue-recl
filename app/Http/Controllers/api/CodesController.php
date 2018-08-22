@@ -15,7 +15,7 @@ class CodesController extends Controller
      */
     public function index()
     {
-        return Codes::all();
+        return Codes::orderBy('priority')->get();
     }
 
     /**
