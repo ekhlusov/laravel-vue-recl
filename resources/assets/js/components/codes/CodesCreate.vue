@@ -18,7 +18,7 @@
                 <div class="row">
                     <div class="col-xs-12 form-group">
                         <label class="control-label">Рекламный JS-код</label>
-                        <textarea v-model="code.body" class="form-control"></textarea>
+                        <editor v-model="code.body" @init="editorInit" lang="javascript" theme="chrome" width="100%" height="500"></editor>
                     </div>
                 </div>
                 <div class="row">
@@ -57,7 +57,18 @@
                         console.log(response);
                         alert('Не удалось добавить запись');
                     });
+            },
+            editorInit() {
+                require('brace/ext/language_tools') //language extension prerequsite...
+                require('brace/mode/html')
+                require('brace/mode/javascript')    //language
+                require('brace/mode/less')
+                require('brace/theme/chrome')
+                require('brace/snippets/javascript') //snippet
             }
-        }
+        },
+        components: {
+            editor: require('vue2-ace-editor'),
+        },
     }
 </script>
