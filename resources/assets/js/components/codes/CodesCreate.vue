@@ -2,7 +2,7 @@
     <div class="panel panel-default">
         <div class="panel-heading">Создание нового кода</div>
         <div class="panel-body">
-            <form :onsubmit="saveCode()" >
+            <form v-on:submit="saveCode()" >
                 <div class="row">
                     <div class="col-xs-12 form-group">
                         <label class="control-label">Название</label>
