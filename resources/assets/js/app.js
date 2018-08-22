@@ -9,32 +9,35 @@ import CodesIndex from './components/codes/CodesIndex.vue';
 import CodesCreate from './components/codes/CodesCreate.vue';
 import CodesEdit from './components/codes/CodesEdit.vue';
 
+import Main from './components/Main.vue';
+
 /**
  * Create routes and router
  */
 window.Vue.use(VueRouter);
 const routes = [
-        {
-            path: '/',
-            components: {
-                codesIndex: CodesIndex
-            }
-        },
-        {
-            path: '/codes/create',
-            component: CodesCreate,
-            name: 'createCode'
-        },
-        {
-            path: '/codes/edit/:id',
-            component: CodesEdit,
-            name: 'editCode'
+    {
+        path: '/',
+        components: {
+            codesIndex: CodesIndex,
+            main: Main
         }
-    ];
+    },
+    {
+        path: '/codes/create',
+        component: CodesCreate,
+        name: 'createCode'
+    },
+    {
+        path: '/codes/edit/:id',
+        component: CodesEdit,
+        name: 'editCode'
+    }
+];
 
-const router = new VueRouter({ routes });
+const router = new VueRouter({routes});
 
 /**
  * Run app
  */
-const app = new Vue({ router }).$mount('#app');
+const app = new Vue({router}).$mount('#app');
